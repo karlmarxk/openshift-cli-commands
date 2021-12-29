@@ -1,3 +1,6 @@
+# Check that OpenShift is running 
+oc status
+
 # Uses the pre-configured OpenShift cluster
 oc login
 
@@ -35,4 +38,13 @@ oc get pods
 oc get pods --watch
 
 # Delete the pod
+oc delete pod <pod name>
+
+# Show all currently running Pods
+oc get pods
+
+# Delete an OpenShift resource
+oc delete <resource type> <resource name>
+
+# Delete the pod for this lesson
 oc delete pod <pod name>
