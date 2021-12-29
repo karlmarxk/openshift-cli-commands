@@ -1,3 +1,6 @@
+# Check openshift version
+oc version
+
 # Check that OpenShift is running 
 oc status
 
