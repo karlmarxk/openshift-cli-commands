@@ -1,0 +1,38 @@
+# Uses the pre-configured OpenShift cluster
+oc login
+
+# Allows you to log in to any OpenShift cluster
+oc login <cluster address>
+
+# Log out
+oc logout
+
+# See current project
+oc project
+
+# Create a new project
+oc new-project demo-project
+
+# List all projects
+oc projects
+
+# Switch projects
+oc project <project name>
+
+# Get built-in documentation for Pods
+oc explain pod
+
+# Get details on the pod's containers
+oc explain pod.spec.containers
+
+# Create a Pod on OpenShift based on a file
+oc create -f pods/pod.yaml
+
+# Show all currently running Pods
+oc get pods
+
+# Watch live updates to pods
+oc get pods --watch
+
+# Delete the pod
+oc delete pod <pod name>
