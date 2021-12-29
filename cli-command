@@ -46,5 +46,5 @@ oc get pods
 # Delete an OpenShift resource
 oc delete <resource type> <resource name>
 
-# Delete the pod for this lesson
+# Delete the pod
 oc delete pod <pod name>
