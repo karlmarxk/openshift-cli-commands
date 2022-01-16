@@ -51,3 +51,13 @@ oc delete <resource type> <resource name>
 
 # Delete the pod
 oc delete pod <pod name>
+
+# View Events in Project
+oc get events -n <Project Name>
+
+# View logs
+oc logs -f bc/<Build Config Name>
+oc logs -f dc/<Deployment Config Name>
+oc logs -f pods/<Pod Name>
+oc logs -f dc/<Deployment Config Name> --version=3
+
