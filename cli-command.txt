@@ -24,7 +24,7 @@ oc logout
 oc project
 
 # Create a new project
-oc new-project demo-project
+oc new-project <project name>
 
 # List all projects
 oc projects
@@ -61,4 +61,23 @@ oc logs -f bc/<Build Config Name>
 oc logs -f dc/<Deployment Config Name>
 oc logs -f pods/<Pod Name>
 oc logs -f dc/<Deployment Config Name> --version=3
+
+# View quota list in a project
+oc get quota -n <Project Name>
+
+# Describe the resource quota of project
+oc describe quota <quota name> -n <project name>
+
+# Manual scaling  
+oc scale --replicas=<number> dc/<deployment config name>
+Example : oc scale --replicas=5 dc/demo-dc
+
+# Auto Scaling
+oc autoscale dc/<deployment conig name> --min <number> --max <number> --cpu-percent=<percentage>
+Example : oc autoscale dc/demo-dc --min 2 --max 5 --cpu-percent=60
+
+# List auto scaler
+oc get hpa
+oc get hpa <autoscaler name>
+
 
