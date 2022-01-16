@@ -6,9 +6,16 @@ oc status
 
 # Uses the pre-configured OpenShift cluster
 oc login
+oc login -u <user name>
 
 # Allows you to log in to any OpenShift cluster
 oc login <cluster address>
+
+# To check identity
+oc get identity
+
+# To check user access
+oc get users
 
 # Log out
 oc logout
@@ -43,14 +50,8 @@ oc get pods --watch
 # Delete the pod
 oc delete pod <pod name>
 
-# Show all currently running Pods
-oc get pods
-
 # Delete an OpenShift resource
 oc delete <resource type> <resource name>
-
-# Delete the pod
-oc delete pod <pod name>
 
 # View Events in Project
 oc get events -n <Project Name>
